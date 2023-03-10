@@ -1,4 +1,4 @@
-package com.paulo.kmm.android
+package com.paulo.kmm.android.ui
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.shape.RoundedCornerShape

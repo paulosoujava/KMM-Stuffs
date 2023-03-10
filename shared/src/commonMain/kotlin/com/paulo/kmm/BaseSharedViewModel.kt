@@ -4,7 +4,7 @@ import kotlinx.coroutines.CoroutineScope
 
 
 
-expect abstract class BaseAndroidViewModel(){
+expect abstract class BaseSharedViewModel(){
     val scope: CoroutineScope
     protected fun onCleared()
 }

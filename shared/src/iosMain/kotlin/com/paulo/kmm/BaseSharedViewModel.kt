@@ -5,7 +5,7 @@ import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.cancel
 
 
-actual abstract class BaseAndroidViewModel{
+actual abstract class BaseSharedViewModel{
 
     actual val scope: CoroutineScope = MainScope()
 

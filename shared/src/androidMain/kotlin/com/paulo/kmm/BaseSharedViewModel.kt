@@ -5,7 +5,7 @@ import androidx.lifecycle.viewModelScope
 
 
 
-actual abstract class BaseAndroidViewModel : ViewModel() {
+actual abstract class BaseSharedViewModel : ViewModel() {
     actual val scope = viewModelScope
 
      actual override fun onCleared() {
