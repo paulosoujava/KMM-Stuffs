@@ -41,8 +41,8 @@ kotlin {
 
                 implementation(Test.kotlinCommon)
                 implementation(Test.kotlinAnnotation)
-//                implementation(Mockk.core)
-//                implementation(Mockk.common)
+                implementation(Mockk.core)
+                implementation(Mockk.common)
             }
         }
         val androidMain by getting {

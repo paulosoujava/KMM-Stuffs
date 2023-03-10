@@ -8,7 +8,7 @@ val envProps = if(flavorProps != null) flavorProps as Map<*,*> else null
 
 android {
     namespace = Namespaces.android
-    compileSdk = Playstore.compileSdk
+    compileSdk = 33
     defaultConfig {
         applicationId = Playstore.applicationId
         minSdk = Playstore.minSdk
