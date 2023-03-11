@@ -1,6 +1,7 @@
 package com.paulo.kmm.android.ui
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Arrangement
@@ -23,6 +24,7 @@ import androidx.compose.ui.unit.TextUnitType
 import androidx.compose.ui.unit.dp
 import com.paulo.kmm.android.demos.FullScreenMessageDialog
 import com.paulo.kmm.models.Story
+import com.paulo.kmm.utils.AndroidApplication
 import com.paulo.kmm.viewmodel.SampleViewModel
 import com.paulo.kmm.viewmodel.ShimmerViewModel
 
@@ -32,7 +34,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         val viewModel = SampleViewModel()
-
+        Log.d("ENVIRONMENT", "${AndroidApplication.environment.name}")
         setContent {
             MyApplicationTheme {
                 Surface(
