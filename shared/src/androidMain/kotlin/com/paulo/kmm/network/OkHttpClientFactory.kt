@@ -1,6 +1,7 @@
 package com.paulo.kmm.network
 
 
+import com.paulo.kmm.network.models.ApiError
 import io.ktor.client.*
 import io.ktor.client.call.*
 import io.ktor.client.engine.okhttp.*
@@ -16,12 +17,12 @@ fun createOkHttpClient(clientConfig: ClientConfig): HttpClient {
         installJsonSerializer()
         installRequestTimeouts()
         installDefaultUserAgentAndHeader(clientConfig)
-       // installResponseValidator()
+        installResponseValidator()
     }
 }
 
 
-/*private fun HttpClientConfig<OkHttpConfig>.installResponseValidator() {
+private fun HttpClientConfig<OkHttpConfig>.installResponseValidator() {
     HttpResponseValidator {
         validateResponse { response ->
             if(response.status != HttpStatusCode.OK){
@@ -34,7 +35,7 @@ fun createOkHttpClient(clientConfig: ClientConfig): HttpClient {
             }
         }
     }
-}*/
+}
 
 @OptIn(ExperimentalSerializationApi::class)
 fun HttpClientConfig<OkHttpConfig>.installJsonSerializer() {
