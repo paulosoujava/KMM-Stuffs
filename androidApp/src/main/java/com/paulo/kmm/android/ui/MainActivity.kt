@@ -25,6 +25,7 @@ import androidx.compose.ui.unit.dp
 import com.paulo.kmm.android.demos.FullScreenMessageDialog
 import com.paulo.kmm.models.Story
 import com.paulo.kmm.utils.AndroidApplication
+import com.paulo.kmm.viewmodel.EntryViewModel
 import com.paulo.kmm.viewmodel.SampleViewModel
 import com.paulo.kmm.viewmodel.ShimmerViewModel
 
@@ -34,7 +35,11 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         val viewModel = SampleViewModel()
-        Log.d("ENVIRONMENT", "${AndroidApplication.environment.name}")
+        val entryViewModel = EntryViewModel()
+        val shimmerViewModel = ShimmerViewModel()
+
+       // Log.d("ENVIRONMENT", "${AndroidApplication.environment.name}")
+
         setContent {
             MyApplicationTheme {
                 Surface(
@@ -43,10 +48,37 @@ class MainActivity : ComponentActivity() {
                 ) {
                    /* val stories by viewModel.stories.collectAsState()
                     sqldDelight(viewModel, stories)*/
-                    val shimmerViewModel = ShimmerViewModel()
-                    ShimmerDemo(shimmerViewModel = shimmerViewModel)
 
+                    //ShimmerDemo(shimmerViewModel = shimmerViewModel)
+                    KtorVid(viewModel = entryViewModel)
 
+                }
+            }
+        }
+    }
+
+    @Composable
+    @OptIn(ExperimentalUnitApi::class)
+    private fun KtorVid(viewModel: EntryViewModel) {
+        Surface(
+            modifier = Modifier.fillMaxSize(),
+            color = MaterialTheme.colors.background
+        ) {
+            val entries by viewModel.entries.collectAsState()
+            Column(modifier = Modifier.padding(12.dp)) {
+                Text(
+                    text = "Ktor Http-Request KMM", style = LocalTextStyle.current.copy(
+                        fontSize = TextUnit(24f, TextUnitType.Sp)
+                    )
+                )
+                Row {
+                    Button(onClick = { viewModel.fetchEntries() }) {
+                        Text(text = "Load Entries")
+                    }
+                }
+
+                entries?.forEach { entry ->
+                    Text(text = entry.description ?: "")
                 }
             }
         }

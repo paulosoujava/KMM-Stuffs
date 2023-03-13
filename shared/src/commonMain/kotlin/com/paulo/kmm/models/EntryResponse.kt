@@ -1,20 +1,15 @@
-package com.paulo.kmm.network.models
+package com.paulo.kmm.models
 
-import com.paulo.kmm.models.Entry
+import com.paulo.kmm.network.models.Entry
 import kotlinx.serialization.SerialName
-import kotlinx.serialization.Serializable
 
-
-// COMO CRIEI ESSES OBJETOS?
-// pesquisa: json to kotlin data class online generator
-// https://json2kt.com/
-@Serializable
+@kotlinx.serialization.Serializable
 data class EntryResponse(
     @SerialName("count") var count: Int? = null,
     @SerialName("entries") var entries: ArrayList<Entry> = arrayListOf()
 )
 
-@Serializable
+@kotlinx.serialization.Serializable
 data class Entry(
     @SerialName("API") var api: String? = null,
     @SerialName("Description") var description: String? = null,
