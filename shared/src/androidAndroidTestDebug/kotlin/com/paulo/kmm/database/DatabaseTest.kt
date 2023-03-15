@@ -3,7 +3,7 @@ package com.paulo.kmm.database
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import com.paulo.kmm.models.StoryMedia
-import com.paulo.kmm.utils.AndroidApplication
+import com.paulo.kmm.utils.AndroidMainApp
 import org.junit.After
 import org.junit.Assert.*
 import org.junit.Before
@@ -17,7 +17,7 @@ class DatabaseTest {
 
     @Before
     fun prepareTest() {
-        AndroidApplication.context = InstrumentationRegistry.getInstrumentation().targetContext
+        AndroidMainApp.context = InstrumentationRegistry.getInstrumentation().targetContext
         database = Database(createSqlDriver())
         database.clearDatabase()
     }

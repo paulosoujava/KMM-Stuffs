@@ -1,5 +1,9 @@
 package com.paulo.kmm.network
 
+// 1) CRIAR CLIENT CONFIG
+// 2) COMO CRIAR O CLIENT HTTP
+// 3) COMO CRIAR O OK_HTTP CLIENT FACTORY
+
 /**
  * Client configuration to be applied whenever a HttpClient is created
  */

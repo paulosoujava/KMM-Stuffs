@@ -1,7 +1,6 @@
-package com.paulo.kmm.network
+package com.paulo.kmm.android.network
 
-
-import com.paulo.kmm.network.models.ApiError
+import com.paulo.kmm.android.network.models.ApiError
 import io.ktor.client.*
 import io.ktor.client.call.*
 import io.ktor.client.engine.okhttp.*
@@ -21,7 +20,9 @@ fun createOkHttpClient(clientConfig: ClientConfig): HttpClient {
     }
 }
 
-
+// 0) ASSISTA A AULA ANTERIOR - PRE-REQUISITO
+// 1) COMO CRIAR UM CUSTOM INTERCEPTOR
+// 2) COMO MAPEAR O RESULTADO DO BACKEND (ApiError / SafeApiCall)
 private fun HttpClientConfig<OkHttpConfig>.installResponseValidator() {
     HttpResponseValidator {
         validateResponse { response ->

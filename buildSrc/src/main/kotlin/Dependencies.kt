@@ -1,6 +1,6 @@
 /** PLAYSTORE VERSIONS */
 object Playstore {
-    const val applicationId = "br.com.progdeelite.kmmprogdeelite.android" // can't change once defined
+    const val applicationId = "com.paulo.kmm.android" // can't change once defined
     const val compileSdk = 33
     const val minSdk = 23
     const val targetSdk = 33
@@ -76,7 +76,7 @@ object SqlDelight {
     const val driverCommon = "com.squareup.sqldelight:runtime:${Versions.sqlDelight}"
     const val driverAndroid = "com.squareup.sqldelight:android-driver:${Versions.sqlDelight}"
     const val driverIos = "com.squareup.sqldelight:native-driver:${Versions.sqlDelight}"
-    const val databasePackage = "br.com.progdeelite.kmmprogdeelite.database"
+    const val databasePackage = "com.paulo.kmm.database"
     const val databaseScheme = "CommonDatabase"
 }
 

@@ -28,12 +28,12 @@ android {
         val keystoreJksSecret = System.getenv("KEYSTORE_JKS_PASSWORD")
         signingConfigs {
             // Creates a signing configuration called "release".
-            create("release") {
+           /* create("release") {
                 storeFile=file(envProps["storeFile"] as Any)      // path to your keystore file.
                 storePassword=keystoreJksSecret                   // password for your keystore.
                 keyAlias=envProps["keyAlias"] as String           // identifying name for your key.
                 keyPassword=keystoreJksSecret                     // password for your key.
-            }
+            }*/
         }
     }
 

@@ -1,8 +1,15 @@
 package com.paulo.kmm.network.models
 
-import com.paulo.kmm.models.Entry
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
+
+// 1) DEFINIR MODELOS DE CONTEUDO (EntryResponse)
+// 2) DEFINIR MODELOS DE ERRO (ApiError)
+// 3) CRIAR OS TIPOS DE RESULTADOS DA API (NetworkResult)
+// 4) TRATAR/MAPEAR RESULTADOS DA API (SafeApiCall)
+// 5) ESPECIFICAR ENDEREçO BASE DO ENDPOINT DENTRO DA VARIAVEL DE AMBIENTE (Environment)
+// 6) ESPECIFICAR API ENDPOINTS (ApiEndpoints)
+
 
 
 // COMO CRIEI ESSES OBJETOS?
@@ -24,3 +31,4 @@ data class Entry(
     @SerialName("Link") var link: String? = null,
     @SerialName("Category") var category: String? = null
 )
+

@@ -1,5 +1,11 @@
 package com.paulo.kmm.network
 
+// 1) CRIAR DEPENDENCIAS, CRIAR/ATUALIZAR MANIFEST
+// 2) ATUALIZAR BUILD GRADLES
+// 3) CRIAR ENVIRONMENT
+// 4) INJETAR ENVIRONMENT IN COMMON (AndroidApp)
+// 5) MOSTRAR BUILD VARIANTS E TESTE NA MAIN ACTIVITY
+
 /**
  * Environment variable used while creating different http clients
  * @param host the host name of the desired environment

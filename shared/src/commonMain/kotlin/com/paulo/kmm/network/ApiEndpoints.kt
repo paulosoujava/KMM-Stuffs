@@ -1,9 +1,7 @@
 package com.paulo.kmm.network
 
-
-
-import com.paulo.kmm.models.EntryResponse
 import com.paulo.kmm.network.models.Entry
+import com.paulo.kmm.network.models.EntryResponse
 import io.ktor.client.*
 import io.ktor.client.call.*
 import io.ktor.client.request.*

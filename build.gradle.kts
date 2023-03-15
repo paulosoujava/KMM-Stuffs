@@ -37,10 +37,10 @@ allprojects {
         if (matcher.find()) {
             val props = java.util.Properties()
             val flavor = matcher.group(1).toLowerCase()
-            /*val propertiesFile = rootProject.file("androidApp/src/${flavor}/res/keystore.properties")
+            val propertiesFile = rootProject.file("androidApp/src/${flavor}/res/keystore.properties")
 
             props.setProperty("FLAVOR", flavor.toLowerCase())
-            props.load(java.io.FileInputStream(propertiesFile))*/
+            props.load(java.io.FileInputStream(propertiesFile))
 
             // export this flavor based property to all projects
             val FLAVOR_PROPERTIES by extra(props)

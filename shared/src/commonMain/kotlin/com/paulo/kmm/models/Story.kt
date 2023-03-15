@@ -30,3 +30,5 @@ data class Slide(
     @SerialName("id")
     val id: String,
 )
+
+

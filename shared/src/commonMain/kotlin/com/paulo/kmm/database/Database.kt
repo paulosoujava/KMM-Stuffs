@@ -1,10 +1,13 @@
 package com.paulo.kmm.database
 
-import br.com.progdeelite.kmmprogdeelite.database.CommonDatabase
 import com.paulo.kmm.models.Story
 import com.paulo.kmm.models.StoryMedia
 import com.squareup.sqldelight.db.SqlDriver
 
+// 1) COMO DEFINIR DEPENDÊNCIAS DE TESTE INSTRUMENTADO
+// 2) COMO ATUALIZAR O BUILD.GRADLE E RESOLVER POSSÍVEIS PROBLEMAS
+// 3) COMO CRIAR PACOTE DE TESTE INSTRUMENTADO
+// 4) COMO CRIAR TESTE INSTRUMENTADO PARA O BANCO DE DADOS (REQUER CONTEXTO)
 class Database(driver: SqlDriver, clearDatabase: Boolean = false) {
     private val database = CommonDatabase(driver)
     private val dbQuery = database.appDatabaseQueries

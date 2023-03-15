@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">KMM App</string>
+    <string name="top_image_text">Top Image Text</string>
+    <string name="middle_image_text">Middle Image Text</string>
+    <string name="bottom_image_text">Bottom Image Text</string>
+
+    <string name="textfield_number_not_found">Este número não foi encontrado.</string>
+    <string name="textfield_invalid_birthdate">Data de nascimento invalida.</string>
+    <string name="textfield_invalid_code">Código invalido.</string>
+
+    <string name="dialog_title_force_update">Atualizar App</string>
+    <string name="dialog_description_force_update">Para continuar usando o app, você precisa atualiza-lo</string>
+    <string name="dialog_primary_button_text_force_update">Atualizar</string>
+    <string name="dialog_secondary_button_text_force_update">Mais tarde</string>
+
+    <string name="dialog_title_cancel">Cadastro</string>
+    <string name="dialog_description_cancel">Tem certeza que deseja cancelar o cadastro?</string>
+    <string name="dialog_primary_button_text_cancel">Cancelar</string>
+    <string name="dialog_secondary_button_cancel">Continuar</string>
+
+    <string name="connectivity_device_online">You are online again</string>
+    <string name="connectivity_device_offline">You are offline</string>
+</resources>
